@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/creditcard/static/css/main.7d47de09.chunk.css",
+    "main.js": "/creditcard/static/js/main.eea8c5e0.chunk.js",
+    "main.js.map": "/creditcard/static/js/main.eea8c5e0.chunk.js.map",
+    "runtime-main.js": "/creditcard/static/js/runtime-main.191ba4b5.js",
+    "runtime-main.js.map": "/creditcard/static/js/runtime-main.191ba4b5.js.map",
+    "static/js/2.8cd3f548.chunk.js": "/creditcard/static/js/2.8cd3f548.chunk.js",
+    "static/js/2.8cd3f548.chunk.js.map": "/creditcard/static/js/2.8cd3f548.chunk.js.map",
+    "index.html": "/creditcard/index.html",
+    "static/css/main.7d47de09.chunk.css.map": "/creditcard/static/css/main.7d47de09.chunk.css.map",
+    "static/js/2.8cd3f548.chunk.js.LICENSE.txt": "/creditcard/static/js/2.8cd3f548.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.191ba4b5.js",
+    "static/js/2.8cd3f548.chunk.js",
+    "static/css/main.7d47de09.chunk.css",
+    "static/js/main.eea8c5e0.chunk.js"
+  ]
+}
