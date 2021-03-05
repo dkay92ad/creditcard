@@ -9,7 +9,7 @@ class Card extends Component {
             name: '',
             numberOnCard: '#### #### #### ####',
             month: '',
-            day: '',
+            year: '',
             cvv: '',
             cardTypeUrl: "",
 
@@ -152,14 +152,14 @@ class Card extends Component {
     }
 
     //Expiration
-    monthChange(m) {
+    monthChange(month) {
         this.setState({
-            month: m.target.value
+            month: month
         });
     }
-    dayChange(d) {
+    yearChange(year) {
         this.setState({
-            day: d.target.value
+            year: year
         });
     }
     //CCV 
@@ -175,15 +175,18 @@ class Card extends Component {
 
     render() {
         const { cardTypeUrl, numberOnCard, typedNumber, typedNumberError, name, monthList, yearList,
-            flipBack, cvv
+            flipBack, cvv, month, year
         } = this.state;
+
+        let monthLabel = month.label != null ? month.label: "MM";
+        let yearLabel = year.label != null ? year.label.slice(2): "YY";
         return (
             <div className="Card">
 
                 <div className="card-form">
                     <div className={flipBack ? "flip-card hovered" : "flip-card"}>
                         <div className="card-container flip-card-inner">
-                            {/* {!flipBack && */}
+                            
                             <div className="flip-card-front">
                                 <img id="card-image" src={`images/16.jpeg`} alt="cardimage" width="450" />
 
@@ -198,13 +201,11 @@ class Card extends Component {
                                     </div>
                                     <div id="card-expires">
                                         <label>Expires</label>
-                                        <p>03/23</p>
+                                        <p>{monthLabel}/{yearLabel}</p>
                                     </div>
                                 </div>
                             </div>
-                            {/* } */}
 
-                            {/* {flipBack && */}
                             <div className="flip-card-back">
                                 <img id="card-image" src={`images/16.jpeg`} alt="cardimage" width="450" />
 
@@ -216,7 +217,6 @@ class Card extends Component {
                                 </div>
                                 {cardTypeUrl && <img id="card-type-image" src={`images/${cardTypeUrl}`} alt="cardtype" />}
                             </div>
-                            {/* } */}
                         </div>
                     </div>
 
@@ -239,6 +239,8 @@ class Card extends Component {
                                 menuPlacement="top"
                                 options={monthList}
                                 placeholder="Month"
+                                onChange={this.monthChange.bind(this)}
+                                value={month}
                             />
                         </div>
                         <div className="exp-date">
@@ -248,6 +250,8 @@ class Card extends Component {
                                 menuPlacement="top"
                                 options={yearList}
                                 placeholder="Year"
+                                onChange={this.yearChange.bind(this)}
+                                value={year}
                             />
                         </div>
                         <div className="form-field cvv">

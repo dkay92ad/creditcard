@@ -1,13 +1,12 @@
 .Card {
   width: 60%;
   min-width: 850px;
-  height: 800px;
+  height: 750px;
   margin: auto;
   background-color: #cce1f4;
   display: grid;
   align-items: flex-end;
   justify-content: center;
-  padding-bottom: 3em;
 }
 
 .card-container {
